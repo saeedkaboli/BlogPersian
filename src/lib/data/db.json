@@ -1,0 +1,11 @@
+{
+  "posts": [],
+  "pendingposts":[],
+  "cancelposts":[],
+  "users": [
+    {"iduser":1,"infouser":{"img":null,"name":"ali","family":"soltan","email":"ali@gmail.com","password":"1234Ali@","number":"0912343536","gender":"men"},"postsuser":{"postimg":"img","posttitle":"title-one","postdes":"this is Matn","poststatus":"pending","postcate":{"Importance":"medium","newscategory":"Tech"},"postdate":"2027","postid":1},"favorituser":{"favorittech":[1,2,3,4],"favoritbio":"i am ali soltan"}}
+  ],
+  "Admin":[]
+  
+
+}
