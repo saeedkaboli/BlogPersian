@@ -19,7 +19,7 @@ const bri= Beiruti({
   subsets: ['latin'],
 })
 
-export default function NavTop() {
+export default function NavTop({Ondata}) {
   const scrollPosition = useScrollPosition();
   return (
     <>
@@ -29,7 +29,7 @@ export default function NavTop() {
       </div>
     <div className="w-1/2 h-full  flex justify-end items-center" id="NavTop-Right">
      <NavTopSearch/>
-      <NavTopMode/>
+      <NavTopMode dataMode={Ondata}/>
       <NavTopSetting/>
       </div>
       
@@ -41,7 +41,7 @@ export default function NavTop() {
 
 
 
-const NavTopMode=()=>{
+const NavTopMode=({dataMode})=>{
     return(
   <span className="flex justify-center items-center" id="NavTop-Mode">
      <Menu>
@@ -55,14 +55,14 @@ const NavTopMode=()=>{
           className="w-40 origin-top-left rounded-lg  bg-white p-1 my-4 text-sm/6 text-gray-600 transition duration-100 ease-out [--anchor-gap:--spacing(1)] focus:outline-none data-closed:scale-95 data-closed:opacity-0 z-50"
         >
           <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5  hover:bg-gray-50 cursor-pointer">
+            <button className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5  hover:bg-gray-50 cursor-pointer" onClick={()=>dataMode("Light")}>
               <MdOutlineLightMode className="size-4 text-gray-600" />
              روشن
            
             </button>
           </MenuItem>
           <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5  hover:bg-gray-50 cursor-pointer">
+            <button className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5  hover:bg-gray-50 cursor-pointer" onClick={()=>dataMode("Dark")}>
             <CiDark className="size-4 text-gray-600" />
         تیره
          
